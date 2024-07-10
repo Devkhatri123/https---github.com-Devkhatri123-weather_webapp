@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="weather.css">
+    <title>weather webapp</title>
+</head>
+
+<body>
+    <!--Loading skelenton template-->
+    <div class="loading-skeleton" id="loading_skeleton">
+        <div id="top">
+            <span style="border: none;  padding: 9px; border-radius: 21px; width: 70%; max-width: 300px;"
+                class="loading-skeleton__item"></span>
+            <div id="search_icon" class="loading-skeleton__item">
+            </div>
+        </div>
+        <div id="loading_cont">
+            <div id="loading_weather_type" class="loading-skeleton__item"></div>
+            <div style="text-align: center;margin-top: 16px;">
+                <h1 style="margin-top: 0px;margin-bottom: 0px; padding-bottom: 10px;" class="loading-skeleton__item">
+                </h1>
+                <h2 style="margin-top: 6px;padding-bottom: 10px;margin-top: 10px;" class="loading-skeleton__item"></h2>
+            </div>
+        </div>
+        <div style="display: flex;justify-content: center;gap: 18px;padding-bottom: 40px;"
+            id="Skeleton_weather_details">
+            <div style="display: flex;" id="humidity_cont">
+                <p class="loading-skeleton__item" style="height: 64px;width: 76px;"></p>
+                <div style="margin-top: 8px;" id="loading-skeleton_humidity_mini_container">
+                    <h4 style="margin: 0px 0px 0px 7px;" class="loading-skeleton__item"
+                        id="loading-skeleton_humidity_heading"></h4>
+                    <p class="loading-skeleton__item" style="margin: 6px 0px 0px 6px;"
+                        id="loading-skeleton_humidity_number"></p>
+                </div>
+            </div>
+            <div style="display: flex;" id="wind_cont">
+                <p class="loading-skeleton__item" style="height: 64px;width: 76px;"></p>
+                <div style="margin-top: 8px;" id="loading-skeleton_windspeed_mini_container">
+                    <h4 style="margin: 0px 0px 0px 7px;" class="loading-skeleton__item"
+                        id="loading-skeleton_wind_heading"></h4>
+                    <p class="loading-skeleton__item" style="margin: 6px 0px 0px 6px;"
+                        id="loading-skeleton_wind_number"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Paragraph for display error message-->
+    <p id="message"></p>
+    <!--Weather card template to display data -->
+    <div id="weather_card">
+        <div id="top">
+            <input type="text" value="" id="search" />
+            <div id="search_icon" style=" background: white;">
+                <i class="fa fa-search" aria-hidden="true" id="search_Icon"></i>
+            </div>
+        </div>
+        <div id="weather_content">
+            <div id="weather_type">
+                <img src="" alt="" id="weather_type_img">
+            </div>
+            <p id="N" class="N"></p>
+            <div style="text-align: center;margin-top: 16px;">
+                <h1 style="margin-top: 0px;margin-bottom: 0;font-size: 57px;font-weight: bolder;" id="temp"></h1>
+                <h2 id="name" class="Name"></h2>
+            </div>
+        </div>
+        <div id="bottom">
+            <div style="display: flex;" class="img_weather">
+                <img src="./images/humidity.png" alt="" id="humidity_img" style="height: 24px;">
+                <div style="line-height: 1;margin-left: 10px;">
+                    <h4 style="margin: 0;margin: -2px 0 6px 0;" id="Humidity">Humidity : </h4>
+                    <p id="humidity"></p>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <img src="./images/wind.png" alt="" id="wind" class="wind_img">
+                <div style="line-height: 1;margin-left: 10px;">
+                    <p id="windspeed">Wind :</p>
+                    <h4 style="margin: 0;" id="Wind"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+
+</html>
